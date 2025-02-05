@@ -14,7 +14,7 @@
             background-image: url('Back.png');
             background-size: cover;
             background-position: center;
-            color: black;
+            color: white;
             font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
@@ -23,26 +23,17 @@
             text-align: center;
         }
 
-        .content {
-            background: rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            border-radius: 10px;
-            color: white;
-        }
-
-        h1 {
-            font-size: 3em;
-        }
-
-        p {
-            font-size: 1.5em;
+        .mission-text {
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            max-width: 500px;
         }
 
         /* Mailchimp Form Styling */
         #mc_embed_signup {
-            background: rgba(255, 255, 255, 0.9);
+            background: transparent;
             padding: 15px;
-            border-radius: 10px;
             width: 400px;
             text-align: center;
         }
@@ -56,21 +47,28 @@
         }
 
         #mc_embed_signup input[type="submit"] {
-            background: #0073e6;
+            background: #EE7F7F;
             color: white;
             border: none;
             padding: 10px;
             cursor: pointer;
             border-radius: 5px;
             width: 100%;
+            font-size: 1em;
         }
 
         #mc_embed_signup input[type="submit"]:hover {
-            background: #005bb5;
+            background: #D96B6B;
         }
     </style>
 </head>
 <body>
+
+    <!-- Mission Statement -->
+    <div class="mission-text">
+        Our mission is to make everyone confident with money.<br>
+        It’s going to be amazing! Sign-up to get news.
+    </div>
 
     <!-- Mailchimp Signup Form -->
     <div id="mc_embed_signup">
