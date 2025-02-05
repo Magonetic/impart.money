@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Impart</title>
     <link rel="icon" href="Icon.png" type="image/png">
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
     <style>
         body {
             margin: 0;
@@ -16,6 +17,7 @@
             color: black;
             font-family: Arial, sans-serif;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
@@ -25,6 +27,7 @@
             background: rgba(0, 0, 0, 0.5);
             padding: 20px;
             border-radius: 10px;
+            color: white;
         }
 
         h1 {
@@ -34,12 +37,66 @@
         p {
             font-size: 1.5em;
         }
+
+        /* Mailchimp Form Styling */
+        #mc_embed_signup {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 10px;
+            width: 400px;
+            text-align: center;
+        }
+
+        #mc_embed_signup input[type="email"] {
+            width: 90%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #mc_embed_signup input[type="submit"] {
+            background: #0073e6;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        #mc_embed_signup input[type="submit"]:hover {
+            background: #005bb5;
+        }
     </style>
 </head>
 <body>
-    <!-- <div class="content">
-        <h1>Welcome to My Simple Website</h1>
-        <p>Enjoy the beauty of nature!</p>
-    </div> -->
+    <div class="content">
+        <h1>Welcome to Impart</h1>
+        <p>Sign up for updates!</p>
+    </div>
+
+    <!-- Mailchimp Signup Form -->
+    <div id="mc_embed_signup">
+        <form action="https://finance.us13.list-manage.com/subscribe/post?u=53d90ec474de24a41b9e941e1&amp;id=7d7db703f1&amp;f_id=001bb3ebf0" method="post" target="_blank" novalidate>
+            <div class="mc-field-group">
+                <label for="mce-EMAIL">Email Address:</label>
+                <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required>
+            </div>
+            <div class="clear foot">
+                <input type="submit" value="Subscribe">
+            </div>
+        </form>
+    </div>
+
+    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+    <script type="text/javascript">
+        (function($) {
+            window.fnames = new Array();
+            window.ftypes = new Array();
+            fnames[0] = 'EMAIL'; ftypes[0] = 'email';
+        }(jQuery));
+        var $mcj = jQuery.noConflict(true);
+    </script>
 </body>
 </html>
