@@ -25,8 +25,8 @@
 
         /* Logo styling */
         .logo {
-            width: 200px; /* Adjust size as needed */
-            margin-bottom: 40px; /* Space between logo and mission statement */
+            width: 200px;
+            margin-bottom: 40px;
         }
 
         .mission-text {
@@ -34,105 +34,20 @@
             font-weight: bold;
             margin-bottom: 20px;
             max-width: 500px;
-            white-space: nowrap; /* Prevents breaking into multiple lines */
         }
 
         /* Mailchimp Form Styling */
         #mc_embed_signup {
             background: transparent;
             padding: 15px;
-            width: 100%;
-            max-width: 400px;
-            text-align: center;
+            width: 400px;
+            text-align: center; /* Centers the whole form */
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        .mc-field-group {
-            width: 100%;
-        }
-
-        #mc_embed_signup label {
-            display: block;
-            text-align: center;
-            font-size: 1em;
-            margin-bottom: 5px;
-        }
-
-        #mc_embed_signup input[type="email"] {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1em;
-        }
-
-        #mc_embed_signup input[type="submit"] {
-            background: #EE7F7F;
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            border-radius: 5px;
-            width: 100%;
-            font-size: 1em;
-            margin-top: 10px;
-        }
-
-        #mc_embed_signup input[type="submit"]:hover {
-            background: #D96B6B;
-        }
-
-        /* LinkedIn Text Styling */
-        .linkedin-text {
-            margin-top: 20px; /* Adds space between form and text */
-            font-size: 1em;
-        }
-
-        .linkedin-text a {
-            color: white;
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
-
-    <!-- Logo -->
-    <img src="Logo_Impart_White.png" alt="Impart Logo" class="logo">
-
-    <!-- Mission Statement -->
-    <div class="mission-text">
-        Our mission is to make everyone confident with money.<br>
-        It’s going to be amazing! Sign-up to get news.
-    </div>
-
-    <!-- Mailchimp Signup Form -->
-    <div id="mc_embed_signup">
-        <form action="https://finance.us13.list-manage.com/subscribe/post?u=53d90ec474de24a41b9e941e1&amp;id=7d7db703f1&amp;f_id=001bb3ebf0" method="post" target="_blank" novalidate>
-            <div class="mc-field-group">
-                <label for="mce-EMAIL">Email Address:</label>
-                <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required>
-            </div>
-            <div class="clear foot">
-                <input type="submit" value="Subscribe">
-            </div>
-        </form>
-    </div>
-
-    <!-- LinkedIn Follow Text -->
-    <div class="linkedin-text">
-        Follow us on <a href="https://www.linkedin.com/company/impartfinance/" target="_blank">LinkedIn here</a>.
-    </div>
-
-    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
-    <script type="text/javascript">
-        (function($) {
-            window.fnames = new Array();
-            window.ftypes = new Array();
-            fnames[0] = 'EMAIL'; ftypes[0] = 'email';
-        }(jQuery));
-    </script>
-
-</body>
-</html>
+        #mc_embed_signup .mc-field-group {
+            display: flex;
+            flex-direction: column;
+           
