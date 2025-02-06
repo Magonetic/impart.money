@@ -66,6 +66,23 @@
         #mc_embed_signup input[type="submit"]:hover {
             background: #D96B6B;
         }
+
+        /* LinkedIn text styling */
+        .linkedin-follow {
+            margin-top: 20px; /* Space between Mailchimp form and LinkedIn link */
+            font-size: 1em;
+        }
+
+        .linkedin-follow a {
+            color: #EE7F7F; /* Match button color */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .linkedin-follow a:hover {
+            text-decoration: underline;
+        }
+
     </style>
 </head>
 <body>
@@ -92,6 +109,11 @@
         </form>
     </div>
 
+    <!-- LinkedIn Follow Section -->
+    <div class="linkedin-follow">
+        Follow us on LinkedIn <a href="https://www.linkedin.com/company/impartfinance/" target="_blank">here</a>.
+    </div>
+
     <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
     <script type="text/javascript">
         (function($) {
@@ -99,4 +121,7 @@
             window.ftypes = new Array();
             fnames[0] = 'EMAIL'; ftypes[0] = 'email';
         }(jQuery));
-       
+    </script>
+
+</body>
+</html>
