@@ -34,38 +34,22 @@
             font-weight: bold;
             margin-bottom: 20px;
             max-width: 500px;
-            white-space: nowrap; /* Prevents breaking into multiple lines */
         }
 
         /* Mailchimp Form Styling */
         #mc_embed_signup {
             background: transparent;
             padding: 15px;
-            width: 100%;
-            max-width: 400px;
+            width: 400px;
             text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .mc-field-group {
-            width: 100%;
-        }
-
-        #mc_embed_signup label {
-            display: block;
-            text-align: center;
-            font-size: 1em;
-            margin-bottom: 5px;
         }
 
         #mc_embed_signup input[type="email"] {
-            width: 100%;
+            width: 90%;
             padding: 10px;
+            margin: 5px 0;
             border: 1px solid #ccc;
             border-radius: 5px;
-            font-size: 1em;
         }
 
         #mc_embed_signup input[type="submit"] {
@@ -77,23 +61,28 @@
             border-radius: 5px;
             width: 100%;
             font-size: 1em;
-            margin-top: 10px;
         }
 
         #mc_embed_signup input[type="submit"]:hover {
             background: #D96B6B;
         }
 
-        /* LinkedIn Text Styling */
-        .linkedin-text {
-            margin-top: 20px; /* Adds space between form and text */
+        /* LinkedIn text styling */
+        .linkedin-follow {
+            margin-top: 20px; /* Space between Mailchimp form and LinkedIn link */
             font-size: 1em;
         }
 
-        .linkedin-text a {
-            color: white;
+        .linkedin-follow a {
+            color: #EE7F7F; /* Match button color */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .linkedin-follow a:hover {
             text-decoration: underline;
         }
+
     </style>
 </head>
 <body>
@@ -120,9 +109,9 @@
         </form>
     </div>
 
-    <!-- LinkedIn Follow Text -->
-    <div class="linkedin-text">
-        Follow us on <a href="https://www.linkedin.com/company/impartfinance/" target="_blank">LinkedIn here</a>.
+    <!-- LinkedIn Follow Section -->
+    <div class="linkedin-follow">
+        Follow us on LinkedIn <a href="https://www.linkedin.com/company/impartfinance/" target="_blank">here</a>.
     </div>
 
     <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
