@@ -42,14 +42,6 @@
             padding: 15px;
             width: 400px;
             text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* Ensure all form elements are centered */
-        }
-
-        .mc-field-group {
-            text-align: center; /* Center the "Email Address" label */
-            width: 100%;
         }
 
         #mc_embed_signup input[type="email"] {
@@ -58,13 +50,6 @@
             margin: 5px 0;
             border: 1px solid #ccc;
             border-radius: 5px;
-            text-align: center;
-        }
-
-        .clear.foot {
-            display: flex;
-            justify-content: center; /* Center the button */
-            width: 100%;
         }
 
         #mc_embed_signup input[type="submit"] {
@@ -74,14 +59,30 @@
             padding: 10px;
             cursor: pointer;
             border-radius: 5px;
-            width: 50%; /* Adjust button width */
+            width: 100%;
             font-size: 1em;
-            text-align: center;
         }
 
         #mc_embed_signup input[type="submit"]:hover {
             background: #D96B6B;
         }
+
+        /* LinkedIn text styling */
+        .linkedin-follow {
+            margin-top: 20px; /* Space between Mailchimp form and LinkedIn link */
+            font-size: 1em;
+        }
+
+        .linkedin-follow a {
+            color: #EE7F7F; /* Match button color */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .linkedin-follow a:hover {
+            text-decoration: underline;
+        }
+
     </style>
 </head>
 <body>
@@ -106,6 +107,11 @@
                 <input type="submit" value="Subscribe">
             </div>
         </form>
+    </div>
+
+    <!-- LinkedIn Follow Section -->
+    <div class="linkedin-follow">
+        Follow us on LinkedIn <a href="https://www.linkedin.com/company/impartfinance/" target="_blank">here</a>.
     </div>
 
     <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
