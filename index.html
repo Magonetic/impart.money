@@ -3,43 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Impart Welcome</title>
+    <title>Impart</title>
     <link rel="icon" href="Icon.png" type="image/png">
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
     <style>
         body {
             margin: 0;
             padding: 0;
             height: 100vh;
-            background-image: url('Back.png');
+            background-image: url('Back.png'); /* Background image */
             background-size: cover;
             background-position: center;
-            color: black;
+            color: white;
             font-family: Arial, sans-serif;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
         }
 
-        .content {
-            background: rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            border-radius: 10px;
+        /* Logo styling */
+        .logo {
+            width: 200px; /* Adjust size as needed */
+            margin-bottom: 40px; /* Space between logo and mission statement */
         }
 
-        h1 {
-            font-size: 3em;
+        .mission-text {
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            width: 100%; 
+            max-width: 1000px;
         }
 
-        p {
-            font-size: 1.5em;
+        /* Mailchimp Form Styling */
+        #mc_embed_signup {
+            background: transparent;
+            padding: 15px;
+            width: 400px;
+            text-align: center;
         }
+
+        #mc_embed_signup input[type="email"] {
+            width: 90%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #mc_embed_signup input[type="submit"] {
+            background: #EE7F7F;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 1em;
+        }
+
+        #mc_embed_signup input[type="submit"]:hover {
+            background: #D96B6B;
+        }
+
+        /* LinkedIn text styling */
+        .linkedin-follow {
+            margin-top: 20px; /* Space between Mailchimp form and LinkedIn link */
+            font-size: 1em;
+        }
+
+        .linkedin-follow a {
+            color: #EE7F7F; /* Match button color */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .linkedin-follow a:hover {
+            text-decoration: underline;
+        }
+
     </style>
 </head>
 <body>
-    <!-- <div class="content">
-        <h1>Welcome to My Simple Website</h1>
-        <p>Enjoy the beauty of nature!</p>
-    </div> -->
+
+    <!-- Logo -->
+    <img src="Logo_Impart_White.png" alt="Impart Logo" class="logo">
+
+    <!-- Mission Statement -->
+    <div class="mission-text">
+        Making <b>everyone</b> confident with their finances.<br>
+        It’s going to be amazing! Sign-up to get news.
+    </div>
+
+    <!-- Mailchimp Signup Form -->
+    <div id="mc_embed_signup">
+        <form action="https://finance.us13.list-manage.com/subscribe/post?u=53d90ec474de24a41b9e941e1&amp;id=7d7db703f1&amp;f_id=001bb3ebf0" method="post" target="_blank" novalidate>
+            <div class="mc-field-group">
+                <label for="mce-EMAIL">Email Address:</label>
+                <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required>
+            </div>
+            <div class="clear foot">
+                <input type="submit" value="Subscribe">
+            </div>
+        </form>
+    </div>
+
+    <!-- LinkedIn Follow Section -->
+    <div class="linkedin-follow">
+        Follow us on LinkedIn <a href="https://www.linkedin.com/company/impartfinance/" target="_blank">here</a>.
+    </div>
+
+    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+    <script type="text/javascript">
+        (function($) {
+            window.fnames = new Array();
+            window.ftypes = new Array();
+            fnames[0] = 'EMAIL'; ftypes[0] = 'email';
+        }(jQuery));
+    </script>
+
 </body>
 </html>
