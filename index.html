@@ -6,6 +6,8 @@
     <title>Impart</title>
     <link rel="icon" href="Icon.png" type="image/png">
     <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+     <!-- Link to Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
@@ -15,7 +17,7 @@
             background-size: cover;
             background-position: center;
             color: white;
-            font-family: Arial, sans-serif;
+            font-family: 'Inter', sans-serif;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -29,12 +31,22 @@
             margin-bottom: 40px; /* Space between logo and mission statement */
         }
 
-        .mission-text {
-            font-size: 1.8em;
-            font-weight: bold;
+        .mission-heading {
+            font-size: 2em;
+            font-weight: normal;
             margin-bottom: 20px;
             width: 100%; 
             max-width: 1000px;
+            line-height: 1.6; 
+        }
+
+        .mission-subheading {
+            font-size: 1.6em;
+            font-weight: normal;
+            margin-bottom: 20px;
+            width: 100%; 
+            max-width: 1000px;
+            line-height: 1.6; 
         }
 
         /* Mailchimp Form Styling */
@@ -84,18 +96,29 @@
             text-decoration: underline;
         }
 
+
+        /* Scale the SVG */
+        .logo {
+            width: 600px;
+            height: auto; /* Maintain aspect ratio */
+        }
+
     </style>
 </head>
 <body>
 
     <!-- Logo -->
-    <img src="Logo_Impart_White.png" alt="Impart Logo" class="logo">
+    <img src="Logo_Impart_White.svg" alt="Impart Logo" class="logo">
+
 
     <!-- Mission Statement -->
-    <div class="mission-text">
+    <div class="mission-heading">
         Making <b>everyone</b> confident with their finances.<br>
-        It’s going to be amazing! Sign-up to get news.
     </div>
+
+<div class="mission-subheading">
+            It’s going to be amazing! Sign-up to get news.
+        </div>
 
     <!-- Mailchimp Signup Form -->
     <div id="mc_embed_signup">
@@ -112,7 +135,7 @@
 
     <!-- LinkedIn Follow Section -->
     <div class="linkedin-follow">
-        Follow us on LinkedIn <a href="https://www.linkedin.com/company/impartfinance/" target="_blank">here</a>.
+        Follow us on <a href="https://www.linkedin.com/company/impartfinance/" target="_blank">LinkedIn</a>.
     </div>
 
     <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
