@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impart - Financial planning for the rest of us</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ==== ANIMATION TIMING VARIABLES ==== */
+        :root {
+            --delete-letter-delay: 100ms;  /* Time between each letter being deleted */
+            --add-letter-delay: 100ms;     /* Time between each letter being added */
+            --word-display-time: 3000ms;   /* Time to display each complete word */
+            --transition-pause: 500ms;     /* Pause between delete and add animations */
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        h1, h2, h3, .logo {
+            font-family: 'Cardo', serif;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        
+        .logo-icon {
+            font-size: 2rem;
+            margin-right: 10px;
+        }
+        
+        .about-button {
+            background-color: #f0f0f0;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+        }
+        
+        .hero {
+            display: flex;
+            margin: 10px 0;
+        }
+        
+        .hero-left {
+            flex: 1;
+            background-color: white;
+            padding: 10px;
+        }
+        
+        .hero-right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 10px;
+        }
+        
+        .hero-heading {
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+        
+        /* Animated text styling */
+        .animated-word {
+            display: inline-block;
+            min-width: 230px; /* Adjust based on your longest word */
+            position: relative;
+        }
+        
+        .beta-button {
+            background-color: #FFD54F;
+            border: none;
+            padding: 15px 25px;
+            font-size: 1.5rem;
+            width: fit-content;
+            cursor: pointer;
+            font-family: 'Cardo', serif;
+        }
+        
+        .quote {
+            text-align: center;
+            font-style: italic;
+            margin: 20px 0;
+            font-size: 1.2rem;
+            font-weight: bold;
+            font-family: 'Cardo', serif;
+        }
+        
+        .features {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+        
+        .feature {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 0 15px;
+        }
+        
+        .feature-image {
+            width: 100%;
+            height: 150px;
+            background-color: white;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+        
+        .feature-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            text-align: center;
+        }
+        
+        footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 0;
+            margin-top: 40px;
+            border-top: 1px solid #e0e0e0;
+            font-size: 0.9rem;
+        }
+        
+        footer a {
+            color: #333;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        
+        .meme-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Impart_Logo.svg" alt="Logo" class="logo">
+        </div>
+        <button class="about-button">About us</button>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <div class="hero-left">
+                <div style="height: 300px; background-color: white; margin-top: 20px; display: flex; align-items: center; justify-content: center;">
+                    <img src="Lead_Photo_from_Demo.png" alt="Image of people with colorful attire" class="meme-image">
+                </div>
+            </div>
+            <div class="hero-right">
+                <h1 class="hero-heading">Financial <span id="animated-word" class="animated-word">planning</span> for the rest of us</h1>
+                <button class="beta-button">Join the beta</button>
+            </div>
+        </section>
+        
+        <div class="quote">
+            "Financial freedom is available" – Robert Kiyosaki
+        </div>
+        
+        <section class="features">
+            <div class="feature">
+                <div class="feature-image">
+                    <img src="Hamster_Demo.png" alt="Don't worry meme" class="meme-image">
+                </div>
+                <h3 class="feature-title">Your productivity workspace<br>for personal finance</h3>
+            </div>
+            <div class="feature">
+                <div class="feature-image">
+                    <img src="Cat_from_Demo.png" alt="Don't just fly, soar meme" class="meme-image">
+                </div>
+                <h3 class="feature-title">Immediately useful ways<br>to get-and-do finance</h3>
+            </div>
+            <div class="feature">
+                <div class="feature-image">
+                    <img src="Dr_Evil_Demo.png" alt="Keep in touch meme" class="meme-image">
+                </div>
+                <h3 class="feature-title">Connect real world data<br>that's relevant to you</h3>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div>©2025 Impart Money Limited</div>
+        <div>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of use</a>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // ==== ANIMATION CONFIGURATION ====
+            // Words to cycle through
+            const words = ['planning', 'answers', 'strategy', 'solutions'];
+            
+            // Timing variables (these mirror the CSS variables for reference)
+            const deleteLetterDelay = 100;  // Time between each letter being deleted (ms)
+            const addLetterDelay = 100;     // Time between each letter being added (ms)
+            const wordDisplayTime = 3000;   // Time to display each complete word (ms)
+            const transitionPause = 500;    // Pause between delete and add animations (ms)
+            
+            // Get the element to animate
+            const animatedWordElement = document.getElementById('animated-word');
+            let currentWordIndex = 0;
+            
+            // Function to delete a word letter by letter
+            function deleteWord(word, callback) {
+                let currentText = word;
+                const deleteInterval = setInterval(() => {
+                    if (currentText.length === 0) {
+                        clearInterval(deleteInterval);
+                        setTimeout(callback, transitionPause); // Pause before adding next word
+                        return;
+                    }
+                    
+                    currentText = currentText.substring(0, currentText.length - 1);
+                    animatedWordElement.textContent = currentText;
+                }, deleteLetterDelay);
+            }
+            
+            // Function to add a word letter by letter
+            function addWord(word, callback) {
+                let currentText = '';
+                let currentIndex = 0;
+                
+                const addInterval = setInterval(() => {
+                    if (currentIndex === word.length) {
+                        clearInterval(addInterval);
+                        setTimeout(callback, wordDisplayTime); // Show complete word for this duration
+                        return;
+                    }
+                    
+                    currentText += word[currentIndex];
+                    animatedWordElement.textContent = currentText;
+                    currentIndex++;
+                }, addLetterDelay);
+            }
+            
+            // Function to start the animation cycle
+            function startAnimation() {
+                // Start with a full word
+                animatedWordElement.textContent = words[currentWordIndex];
+                
+                // After displaying the word, start the cycle
+                setTimeout(() => {
+                    animateCycle();
+                }, wordDisplayTime);
+            }
+            
+            // Main animation cycle
+            function animateCycle() {
+                const currentWord = words[currentWordIndex];
+                
+                // Delete the current word
+                deleteWord(currentWord, () => {
+                    // Move to the next word
+                    currentWordIndex = (currentWordIndex + 1) % words.length;
+                    const nextWord = words[currentWordIndex];
+                    
+                    // Add the next word
+                    addWord(nextWord, animateCycle);
+                });
+            }
+            
+            // Start the animation
+            startAnimation();
+        });
+    </script>
+</body>
+</html>

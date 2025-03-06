@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Landing Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --animation-speed: 1.5s;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #fff;
+        }
+
+        .logo {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-family: 'Cardo', serif;
+            font-size: 3rem;
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+            color: #222;
+        }
+
+        .rotating-text {
+            display: inline-block;
+            position: relative;
+            font-weight: bold;
+            color: #0073e6;
+        }
+
+        @keyframes disappear {
+            0% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        @keyframes appear {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .word {
+            position: absolute;
+            opacity: 0;
+            animation: disappear var(--animation-speed) ease-in-out forwards;
+        }
+
+        .word.active {
+            opacity: 1;
+            animation: appear var(--animation-speed) ease-in-out forwards;
+        }
+
+        .hero-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .images-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .images-container img {
+            width: 200px;
+            height: auto;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero-container">
+        <img src="Impart_Logo.svg" alt="Logo" class="logo">
+        <h1>Your <span class="rotating-text"></span></h1>
+    </div>
+    <div class="images-container">
+        <img src="Dr_Evil_Demo.png" alt="Meme 1">
+        <img src="Cat_from_Demo.png" alt="Meme 2">
+        <img src="Hamster_Demo.png" alt="Meme 3">
+    </div>
+    <script>
+        const words = ["planning", "answers", "strategy", "solutions"];
+        let index = 0;
+        const textContainer = document.querySelector(".rotating-text");
+
+        function createWordSpan(word) {
+            let span = document.createElement("span");
+            span.classList.add("word");
+            span.textContent = word;
+            return span;
+        }
+
+        function updateWord() {
+            textContainer.innerHTML = "";
+            let newWord = createWordSpan(words[index]);
+            newWord.classList.add("active");
+            textContainer.appendChild(newWord);
+            index = (index + 1) % words.length;
+            setTimeout(updateWord, parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--animation-speed')) * 1000);
+        }
+
+        updateWord();
+    </script>
+</body>
+</html>
